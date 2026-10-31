@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para nuestros abuelitos · Familia Moreno</title>
+<meta name="description" content="Un homenaje de la familia Moreno a los abuelitos que ya no están: su recuerdo, su ofrenda y la película «Kailany y el camino de cempasúchil».">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Para nuestros abuelitos · Familia Moreno">
+<meta property="og:description" content="Por el camino de cempasúchil, los abuelitos vuelven a casa. Un homenaje con amor de la familia Moreno.">
+<meta property="og:image" content="https://raulgm00.github.io/abuelitos-moreno/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://raulgm00.github.io/abuelitos-moreno/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1a0b2e">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noche:#1a0b2e; --noche-2:#2a1245; --vidrio:rgba(42,18,69,.72); --borde:rgba(255,197,107,.28);
+  --oro:#ffc56b; --cempa:#f59e0b; --rosa:#ec4899; --morado:#a855f7; --tinta:#fff7ea; --sub:#e9d8f5;
+  --sombra:0 20px 50px rgba(0,0,0,.45);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--noche);color:var(--tinta);font:400 1.06rem/1.65 Nunito,system-ui,sans-serif;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:var(--oro)}
+:focus-visible{outline:3px solid var(--oro);outline-offset:3px;border-radius:8px}
+.envoltura{width:min(1100px,100% - 32px);margin-inline:auto}
+h1,h2{font-family:Fraunces,Georgia,serif;font-weight:800;line-height:1.1;letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--oro);margin-bottom:.6rem}
+.lead{color:var(--sub);max-width:60ch}
+
+/* papel picado */
+.picado{position:absolute;inset:0 0 auto 0;height:70px;display:flex;justify-content:center;gap:6px;z-index:3;pointer-events:none}
+.picado::before{content:"";position:absolute;top:8px;left:0;right:0;height:2px;background:rgba(255,255,255,.55)}
+.picado i{width:clamp(38px,6vw,70px);height:60px;margin-top:9px;transform-origin:top center;animation:mecer 3.6s ease-in-out infinite;
+  -webkit-mask:radial-gradient(circle at 50% 42%,transparent 6px,#000 7px);mask:radial-gradient(circle at 50% 42%,transparent 6px,#000 7px);
+  clip-path:polygon(0 0,100% 0,100% 82%,85% 100%,70% 82%,50% 100%,30% 82%,15% 100%,0 82%)}
+.picado i:nth-child(5n+1){background:var(--rosa)} .picado i:nth-child(5n+2){background:var(--cempa)}
+.picado i:nth-child(5n+3){background:var(--morado)} .picado i:nth-child(5n+4){background:#22c55e} .picado i:nth-child(5n){background:#38bdf8}
+.picado i:nth-child(2n){animation-delay:-1.2s} .picado i:nth-child(3n){animation-delay:-2.1s}
+@keyframes mecer{50%{transform:rotate(4deg) skewX(-2deg)}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:grid;align-items:end;isolation:isolate;overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero picture img{animation:respira 18s ease-in-out infinite alternate}
+@keyframes respira{to{transform:scale(1.06)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(26,11,46,.25) 0%,rgba(26,11,46,.1) 35%,rgba(26,11,46,.85) 72%,var(--noche) 100%)}
+.hero .texto{padding:0 0 clamp(48px,9vh,96px)}
+.hero h1{font-size:clamp(2.5rem,7vw,5rem);text-shadow:0 4px 24px rgba(0,0,0,.6)}
+.hero h1 span{color:var(--oro)}
+.hero .lead{font-size:clamp(1.05rem,2.2vw,1.3rem);margin:.8rem 0 1.6rem;color:#fff3e0;text-shadow:0 2px 12px rgba(0,0,0,.7)}
+.boton{display:inline-flex;align-items:center;gap:.6rem;min-height:48px;padding:.75rem 1.4rem;border-radius:999px;border:0;cursor:pointer;
+  font:800 1rem Nunito,sans-serif;text-decoration:none;color:#2a1245;background:linear-gradient(135deg,#ffd27a,var(--cempa));
+  box-shadow:0 10px 30px rgba(245,158,11,.35);transition:transform .2s,box-shadow .2s}
+.boton:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(245,158,11,.5)}
+.boton.sec{background:transparent;color:var(--oro);border:2px solid var(--borde);box-shadow:none}
+
+section{padding:clamp(64px,10vw,120px) 0;position:relative}
+
+/* abuelitos */
+.dos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:28px;margin-top:2rem}
+.tarjeta{position:relative;border-radius:28px;overflow:hidden;background:var(--vidrio);border:1px solid var(--borde);box-shadow:var(--sombra)}
+.tarjeta .foto{aspect-ratio:4/4.4;overflow:hidden;position:relative}
+.tarjeta .foto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;transition:transform .6s}
+.tarjeta:hover .foto img{transform:scale(1.04)}
+.tarjeta .foto::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 60px rgba(255,197,107,.35);
+  background:radial-gradient(120% 80% at 50% 0%,transparent 55%,rgba(26,11,46,.55))}
+.tarjeta .pie{padding:20px 24px 26px}
+.tarjeta h3{font:800 1.5rem Fraunces,serif;color:var(--oro)}
+.tarjeta p{color:var(--sub)}
+
+/* película */
+.cine{background:radial-gradient(80% 60% at 50% 0%,rgba(168,85,247,.22),transparent 70%),var(--noche-2)}
+.pestanas{display:flex;gap:10px;flex-wrap:wrap;margin:1.4rem 0}
+.pestanas button{min-height:44px;padding:.5rem 1.1rem;border-radius:999px;border:2px solid var(--borde);background:transparent;color:var(--sub);
+  font:700 .95rem Nunito,sans-serif;cursor:pointer}
+.pestanas button[aria-selected="true"]{background:var(--oro);color:#2a1245;border-color:var(--oro)}
+.marco{border-radius:24px;overflow:hidden;border:1px solid var(--borde);box-shadow:var(--sombra),0 0 80px rgba(245,158,11,.18);background:#000;margin-inline:auto}
+.marco video{width:100%;height:auto;background:#000}
+.marco.vertical{max-width:420px}
+.nota{font-size:.92rem;color:var(--sub);margin-top:.9rem}
+
+/* velita */
+.velita{text-align:center}
+.vela{width:64px;height:150px;margin:30px auto 18px;position:relative}
+.vela .cera{position:absolute;bottom:0;left:50%;translate:-50% 0;width:46px;height:110px;border-radius:10px 10px 6px 6px;
+  background:linear-gradient(90deg,#f5e6c8,#fff8ea 45%,#e8d3ad)}
+.vela .flama{position:absolute;bottom:108px;left:50%;width:22px;height:38px;translate:-50% 0;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;
+  background:radial-gradient(circle at 50% 70%,#fff 0 18%,#ffd27a 35%,#f59e0b 65%,transparent 72%);opacity:0;transform:scale(.3);
+  transition:opacity .5s,transform .5s;filter:drop-shadow(0 0 18px #f59e0b)}
+.vela.encendida .flama{opacity:1;transform:scale(1);animation:titila 1.6s ease-in-out infinite}
+.vela.encendida::before{content:"";position:absolute;inset:-60px;border-radius:50%;background:radial-gradient(circle,rgba(255,197,107,.35),transparent 65%)}
+@keyframes titila{25%{transform:scale(1.04,.96) rotate(-2deg)}50%{transform:scale(.97,1.05) rotate(1deg)}75%{transform:scale(1.02,.98) rotate(2deg)}}
+
+/* pétalos */
+.petalos{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.petalos b{position:absolute;top:-30px;width:12px;height:9px;border-radius:60% 40% 60% 40%;background:var(--cempa);opacity:.75;animation:caer linear infinite}
+@keyframes caer{to{transform:translate3d(var(--dx,40px),110vh,0) rotate(540deg)}}
+
+footer{padding:48px 0 64px;text-align:center;color:var(--sub);border-top:1px solid rgba(255,255,255,.08)}
+footer strong{color:var(--oro);font-family:Fraunces,serif;font-size:1.25rem;display:block;margin-bottom:.3rem}
+
+.aparece{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.aparece.visible{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .petalos{display:none} .aparece{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="petalos" aria-hidden="true"></div>
+
+<header class="hero">
+  <div class="picado" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <picture>
+    <source media="(max-width: 700px)" srcset="img/ofrenda-vertical.jpg">
+    <img src="img/ofrenda.jpg" alt="Los abuelitos, luminosos y tomados de la mano, caminan por un camino de pétalos de cempasúchil hacia la ofrenda donde están sus fotos.">
+  </picture>
+  <div class="envoltura texto">
+    <h1>Para nuestros <span>abuelitos</span></h1>
+    <p class="lead">Ya no están en la mesa, pero nunca se fueron de la casa. Cada Día de Muertos les ponemos el camino de cempasúchil para que vuelvan con nosotros.</p>
+    <a class="boton" href="#pelicula">▶ Ver la película</a>
+  </div>
+</header>
+
+<main>
+  <section id="recuerdo">
+    <div class="envoltura">
+      <h2 class="aparece">Siempre en casa</h2>
+      <p class="lead aparece">Con todo nuestro amor, la familia Moreno los recuerda así: sonriendo, juntos y tomados de la mano.</p>
+      <div class="dos">
+        <article class="tarjeta aparece">
+          <div class="foto"><img src="img/abuela-cara.jpg" alt="Retrato de la abuelita en estilo de caricatura: sonrisa amplia, cabello ondulado castaño y blusa crema con flores bordadas." loading="lazy"></div>
+          <div class="pie"><h3>Abuelita Moreno</h3><p>Su sonrisa grande y su cariño siguen aquí, en cada reunión de la familia.</p></div>
+        </article>
+        <article class="tarjeta aparece">
+          <div class="foto"><img src="img/abuelo-cara.jpg" alt="Retrato del abuelito en estilo de caricatura: mirada bondadosa, cárdigan gris y bufanda blanca." loading="lazy"></div>
+          <div class="pie"><h3>Abuelito Moreno</h3><p>Su ternura y su calma nos siguen acompañando, como siempre.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="pelicula" class="cine">
+    <div class="envoltura">
+      <h2 class="aparece">Kailany y el camino de cempasúchil</h2>
+      <p class="lead aparece">Un cuento animado del tío Raúl. Kailany, Chispita y Manta arman el camino de pétalos… y al final de la película los abuelitos vuelven a casa.</p>
+      <div class="pestanas" role="tablist" aria-label="Formato de la película">
+        <button role="tab" aria-selected="true" data-formato="16x9">Pantalla grande</button>
+        <button role="tab" aria-selected="false" data-formato="9x16">Celular (vertical)</button>
+      </div>
+      <div class="marco" id="marco">
+        <video id="video" controls playsinline preload="metadata" poster="img/ofrenda.jpg">
+          <source src="video/kailany-pelicula-16x9.mp4" type="video/mp4">
+          <track kind="subtitles" srclang="es" label="Español" src="video/kailany-pelicula-16x9.vtt" default>
+          Tu navegador no puede reproducir el video.
+        </video>
+      </div>
+      <p class="nota">Tiene subtítulos en español. Súbele el volumen 🔊</p>
+    </div>
+  </section>
+
+  <section id="velita" class="velita">
+    <div class="envoltura">
+      <h2 class="aparece">Enciende una velita</h2>
+      <p class="lead aparece" style="margin-inline:auto">Para que siempre encuentren el camino.</p>
+      <div class="vela" id="vela" aria-hidden="true"><div class="flama"></div><div class="cera"></div></div>
+      <button class="boton" id="encender" aria-pressed="false">🕯️ Encender velita</button>
+      <p class="nota" id="msg-vela" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="envoltura">
+    <strong>Familia Moreno</strong>
+    Día de Muertos 2026 · Con amor, para los que siempre vuelven a casa.
+  </div>
+</footer>
+
+<script>
+(() => {
+  const quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // pétalos que caen
+  if (!quieto) {
+    const caja = document.querySelector('.petalos');
+    for (let i = 0; i < 16; i++) {
+      const b = document.createElement('b');
+      b.style.left = (Math.random() * 100) + 'vw';
+      b.style.setProperty('--dx', (Math.random() * 160 - 80) + 'px');
+      b.style.animationDuration = (9 + Math.random() * 9) + 's';
+      b.style.animationDelay = (-Math.random() * 18) + 's';
+      if (i % 3 === 0) b.style.background = '#fb923c';
+      caja.appendChild(b);
+    }
+  }
+  // aparecer al hacer scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }), { threshold: .2 });
+  document.querySelectorAll('.aparece').forEach(el => io.observe(el));
+  // formato de la película
+  const video = document.getElementById('video'), marco = document.getElementById('marco');
+  document.querySelectorAll('[data-formato]').forEach(b => b.addEventListener('click', () => {
+    document.querySelectorAll('[data-formato]').forEach(x => x.setAttribute('aria-selected', x === b));
+    const f = b.dataset.formato;
+    marco.classList.toggle('vertical', f === '9x16');
+    video.pause();
+    video.querySelector('source').src = `video/kailany-pelicula-${f}.mp4`;
+    video.querySelector('track').src = `video/kailany-pelicula-${f}.vtt`;
+    video.poster = f === '9x16' ? 'img/ofrenda-vertical.jpg' : 'img/ofrenda.jpg';
+    video.load();
+  }));
+  // velita (se recuerda solo en este navegador)
+  const vela = document.getElementById('vela'), btn = document.getElementById('encender'), msg = document.getElementById('msg-vela');
+  const prender = (guardar) => {
+    vela.classList.add('encendida'); btn.setAttribute('aria-pressed', 'true'); btn.textContent = '🕯️ Velita encendida';
+    msg.textContent = 'Gracias. Su luz los guía de regreso a casa.';
+    if (guardar) try { localStorage.setItem('velita-moreno', '1'); } catch (e) {}
+  };
+  try { if (localStorage.getItem('velita-moreno')) prender(false); } catch (e) {}
+  btn.addEventListener('click', () => prender(true));
+})();
+</script>
+</body>
+</html>
